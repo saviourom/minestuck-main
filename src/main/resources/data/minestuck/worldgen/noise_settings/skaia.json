@@ -1,0 +1,132 @@
+{
+    "sea_level": 0,
+    "disable_mob_generation": false,
+    "default_block": {
+        "Name": "minecraft:stone"
+    },
+    "default_fluid": {
+        "Properties": {
+            "level": "0"
+        },
+        "Name": "minecraft:water"
+    },
+    "noise": {
+        "size_vertical": 2,
+        "size_horizontal": 1,
+        "min_y": 0,
+        "height": 256
+    },
+    "noise_router": {
+        "barrier": "zero",
+        "fluid_level_floodedness": "zero",
+        "fluid_level_spread": "zero",
+        "lava": "zero",
+        "temperature": "zero",
+        "vegetation": "zero",
+        "continents": "zero",
+        "erosion": "zero",
+        "depth": "minestuck:skaia/depth",
+        "ridges": "minestuck:skaia/ridges",
+        "initial_density_without_jaggedness": "minestuck:skaia/initial_density",
+        "final_density": "minestuck:skaia/final_density",
+        "vein_toggle": "zero",
+        "vein_ridged": "zero",
+        "vein_gap": "zero"
+    },
+    "surface_rule": {
+        "type": "sequence",
+        "sequence": [
+            {
+                "type": "condition",
+                "if_true": {
+                    "type": "vertical_gradient",
+                    "random_name": "bedrock_floor",
+                    "true_at_and_below": {
+                        "above_bottom": 0
+                    },
+                    "false_at_and_above": {
+                        "above_bottom": 5
+                    }
+                },
+                "then_run": {
+                    "type": "block",
+                    "result_state": {
+                        "Name": "minecraft:bedrock"
+                    }
+                }
+            },
+            {
+                "type": "condition",
+                "if_true": {
+                    "type": "stone_depth",
+                    "offset": 0,
+                    "add_surface_depth": true,
+                    "secondary_depth_range": 0,
+                    "surface_type": "floor"
+                },
+                "then_run": {
+                    "type": "minestuck:checkered",
+                    "size": 16,
+                    "rules": [
+                        {
+                            "type": "sequence",
+                            "sequence": [
+                                {
+                                    "type": "condition",
+                                    "if_true": {
+                                        "type": "noise_threshold",
+                                        "noise": "surface",
+                                        "min_threshold": 0.4,
+                                        "max_threshold": 99999
+                                    },
+                                    "then_run": {
+                                        "type": "block",
+                                        "result_state": {
+                                            "Name": "minestuck:light_gray_chess_dirt"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "block",
+                                    "result_state": {
+                                        "Name": "minestuck:white_chess_dirt"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sequence",
+                            "sequence": [
+                                {
+                                    "type": "condition",
+                                    "if_true": {
+                                        "type": "noise_threshold",
+                                        "noise": "surface",
+                                        "min_threshold": -99999,
+                                        "max_threshold": -0.4
+                                    },
+                                    "then_run": {
+                                        "type": "block",
+                                        "result_state": {
+                                            "Name": "minestuck:dark_gray_chess_dirt"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "block",
+                                    "result_state": {
+                                        "Name": "minestuck:black_chess_dirt"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "spawn_target": [],
+    "aquifers_enabled": false,
+    "ore_veins_enabled": false,
+    "legacy_random_source": true
+}

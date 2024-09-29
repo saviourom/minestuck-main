@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "minestuck:raw_cruxite"
+    },
+    "u": {
+      "tag": "forge:chunks/uranium"
+    }
+  },
+  "pattern": [
+    "cuc",
+    "ucu",
+    "cuc"
+  ],
+  "result": {
+    "item": "minestuck:energy_core"
+  }
+}

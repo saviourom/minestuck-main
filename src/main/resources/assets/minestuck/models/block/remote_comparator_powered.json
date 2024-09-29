@@ -1,0 +1,12 @@
+{
+    "parent": "minestuck:block/cube_up_mirrored",
+    "textures": {
+        "down": "minestuck:block/redstone_machine_block",
+        "up": "minestuck:block/redstone_machine_block",
+        "north": "minestuck:block/remote_observer_powered",
+        "south": "minestuck:block/rotator_bottom",
+        "west": "minestuck:block/redstone_machine_block",
+        "east": "minestuck:block/redstone_machine_block",
+        "particle": "minestuck:block/redstone_machine_block"
+    }
+}

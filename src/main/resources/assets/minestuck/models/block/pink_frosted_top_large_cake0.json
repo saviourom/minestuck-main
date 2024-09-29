@@ -1,0 +1,12 @@
+{
+    "parent": "minestuck:block/cube_up_mirrored",
+    "textures": {
+        "particle": "minestuck:block/pink_frosted_top_large_cake_side",
+        "down": "minestuck:block/large_cake",
+        "up": "minestuck:block/pink_frosted_top_large_cake_top0",
+        "north": "minestuck:block/pink_frosted_top_large_cake_side",
+        "south": "minestuck:block/pink_frosted_top_large_cake_side",
+        "west": "minestuck:block/pink_frosted_top_large_cake_side",
+        "east": "minestuck:block/pink_frosted_top_large_cake_side"
+    }
+}

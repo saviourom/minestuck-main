@@ -1,0 +1,38 @@
+{
+	"credit": "Made with Blockbench by Riotmode",
+	"texture_size": [256, 256],
+	"textures": {
+		"0": "minestuck:block/machine/cruxtruder",
+		"particle": "minestuck:block/machine/particle"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9, 0, 8]},
+			"faces": {
+				"north": {"uv": [9, 3, 10, 4], "texture": "#0"},
+				"east": {"uv": [8, 3, 9, 4], "texture": "#0", "cullface": "east" },
+				"south": {"uv": [11, 3, 12, 4], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [10, 3, 11, 4], "texture": "#0"},
+				"up": {"uv": [10, 3, 9, 2], "texture": "#0"},
+				"down": {"uv": [11, 2, 10, 3], "texture": "#0", "cullface": "down"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "base",
+			"origin": [1, 24, 0],
+			"color": 0,
+			"children": [
+				{
+					"name": "nw",
+					"origin": [1, 24, 0],
+					"color": 0,
+					"children": [0]
+				}
+			]
+		}
+	]
+}

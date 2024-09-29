@@ -1,0 +1,12 @@
+{
+    "parent": "minestuck:block/cube_up_mirrored",
+    "textures": {
+        "down": "minestuck:block/stripped_scarred_shadewood_log_top",
+        "up": "minestuck:block/stripped_scarred_shadewood_log_top",
+        "north": "minestuck:block/stripped_scarred_shadewood_log",
+        "south": "minestuck:block/stripped_shadewood_log",
+        "west": "minestuck:block/stripped_shadewood_log",
+        "east": "minestuck:block/stripped_shadewood_log",
+        "particle": "minestuck:block/stripped_shadewood_log"
+    }
+}
